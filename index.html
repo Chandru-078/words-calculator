@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../LenthConverter/style.css">
+    <title>Length Converter</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h2>Type a Sentence</h2>   
+    <div class="inputdiv">
+        <!-- <input type="text" id="input" placeholder="type below 1000 words" min="1000"> -->
+
+        <textarea name="count" title="TYPE HERE" rows="20" cols="40" id="input" placeholder="HELLO SOPIKA TYPE HERE" maxlength="1000"></textarea>
+    </div>
+    <div>
+        <button type="submit" onclick="countvalues()">Calculate Words</button>
+    </div>
+    <div id="result">
+
+    </div>
+    </div>
+     
+    <script>
+
+        function countvalues(){
+            let countval = document.getElementById("input").value
+            let countingval = countval.length
+            let result = document.getElementById("result")
+            result.innerHTML = countingval + "words"
+
+            
+        }
+        
+    //     function convert(){
+    //   const cmval = Number(document.getElementById("input").value)
+    //   const inchval = cmval/2.54
+    //   const  result = document.getElementById("result")
+    //   result.innerHTML = inchval.toFixed(2) + "Inches" 
+    //     }
+
+    // function convert(){
+    //     let clval = Number (document.getElementById("input").value)
+    //     let fhval = clval * (9/5)+35
+    //     let result = document.getElementById("result")
+    //     result.innerHTML = fhval
+    // }
+    
+
+        let Str1 = "Hello iam software engineer"
+        let Str2 = " After that i am a ceo in a mnc company"
+        let name = "CHANDRU"
+
+        // Str1.slice(start,end)
+        // Str2.substring(start,end)
+        // Str1.substr(start,lenth)
+        // Str1[3] It will show the value which is stored in 3 index poisition
+        // Str1.chatAt(5) It shows The value which is stored in 3 index poisition like above i gave that
+        // Str1.ChatAtCode(4) it shows the word's husky value
+        // Str2.indexOf("t") it shows the index position of given value
+        // Str2.lastindexOf("t") it also similar to above i have given but it starts from last
+        // Str1.search("iam") it used to find a word's index position
+        // Str1.includes("engineer") it is used to check wheather the word present or not
+        // Str2.length it used to show count of the given words
+
+        console.log(Str1 + Str2)
+
+        let firstname = "Chandru"
+        let lastname = "Chandru"
+        let city = "Chennai"
+        
+        console.log(firstname + " " + lastname + " "+" Lives In " + city)
+
+        let bday = `happy`
+        console.log(bday)
+
+        let cart = `"you have five item in your car your bill amout is $95"`
+        console.log(cart)
+
+        // Arrays
+
+        let cities = ["Chennai","Tenkasi","Tirunelveli"]
+        let scores = [23,24,67,92]
+
+
+        // Access Last Element
+
+        let states = ["Tamil Nadu","Kerala","pune","odisa"]
+        let count  = [200,300,400,500]
+       
+        console.log(count[count.length-1])
+        
+        // Access 2 Element 
+
+        console.log(scores[2])
+
+        // Mix of Int and String
+
+        let arr = [12,3,7,11,11,6778,"hello","chandru","byee",[23,34,"chandru",1]]
+        console.log(arr[0][1])
+
+        // 2D Array
+
+        let arr2 = [[1,2,3],[3,2,1],[34,56,78]]
+        console.log(arr2[0][2])
+        console.log(arr2[2][2])
+
+        // Array Methods
+
+        let array = ['a','b','c','d']
+
+        // push - Add Elements to the end
+
+        array.push('e')
+        console.log(array)
+
+        // pop - Remove Last Element And Returns Removed Value
+
+        console.log(array.pop())
+
+        // shift - Remove First Element And Returns Removed Value
+
+        console.log(array.shift())
+        console.log(array)
+
+        // unshift - Add Element Start Of the Array Returns New Length
+
+        console.log(array.unshift("a"))
+        console.log(array)
+
+        // delete 
+        // delete array [2]
+        // console.log(array)   
+
+        // splice
+        // 1st parameter - Starting Index
+        // 2nd parameter - no of elements to be deleted from starting index
+        //3rd (or more) parameters - to be inserted from starting index position 
+
+        array.splice(2,2) // - Deletes 2 Element starting at index position 2
+        console.log(array)
+
+        array.splice(1,1,'M') // Replace Delete Index 1 and insert m 
+        console.log(array)
+
+        array.splice(1,2,'c','d','e') // Delete Elements at Position 2 and 2 and insert 'c','d','e'
+        console.log(array)
+
+        // slice (starting index , ending index) ending index not included
+        console.log(array.slice(1,4))
+
+        // reverse 
+        array.reverse()
+        console.log(array)
+
+        // join - convert array to string
+
+        let str = array.join()
+        console.log(str)
+
+        // split - convert string to array
+
+        let str3 = "a,v,d,e,g"
+        let arr3 = str3.split(" ")
+        console.log(str3)
+        console.log(arr3)
+
+        // concat and spread oprator 
+
+        let firstarr = [2,3,4]
+        let secondarr = [12,43,"ch","an"]
+        let joinedarr = [firstarr,secondarr]
+        console.log(joinedarr)
+
+        let Joinedarr = firstarr.concat(secondarr)
+        console.log(Joinedarr)
+
+        // excersise questions 
+
+        let rep1 = [7,9,11]
+        rep1.splice(0,1,17,19,111)
+        console.log(rep1)
+
+        let rem = [1000,200,300]
+        console.log(rem.shift(100))
+        console.log(rem)
+
+        let addlast = [100,200,300,400]
+        addlast.push(100)
+        console.log(addlast)
+
+
+       
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
